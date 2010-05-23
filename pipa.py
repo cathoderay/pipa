@@ -29,6 +29,7 @@ def pip(input, n):
     count = 0
     for i in range(n):        
         maximum = 0
+        print output
         for pip_index, pip in zip(range(len(output)), output):
             if pip_index < (len(output) - 1):
                 pip_a = pip
@@ -36,8 +37,7 @@ def pip(input, n):
                 pip_a_input_index = pip[2]
                 pip_b_input_index = output[pip_index + 1][2]
 
-                input_interval = range(pip_a_input_index + 1, pip_b_input_index)
-               
+                input_interval = range(pip_a_input_index + 1, pip_b_input_index)              
                 if len(input_interval) == 0: continue
                 
                 for j in input_interval:
@@ -48,7 +48,6 @@ def pip(input, n):
                         better_position = j
                         temp_pip_a_index = pip_index
         output.insert(temp_pip_a_index + 1, better + (better_position,))               
-    output.sort()
     return output
 
 n = 1000
