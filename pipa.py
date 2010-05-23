@@ -46,8 +46,6 @@ def pip(input, n):
                         maximum = distance
                         better = input[j]
                         better_position = j
-                        temp_pip_a = pip_a
-                        temp_pip_b = pip_b
                         temp_pip_a_index = pip_index
         output.insert(temp_pip_a_index + 1, better + (better_position,))               
     output.sort()
