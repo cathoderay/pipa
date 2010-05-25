@@ -64,7 +64,7 @@ def pip(input, n):
                         better_position = j
                         temp_pip_a_index = pip_index
         output.insert(temp_pip_a_index + 1, better + (better_position,))               
-    return output
+    return map(lambda x: x[:2],  output)
 
 n = 100
 #values = [cos(x) for x in range(-n/2,   n/2)]
